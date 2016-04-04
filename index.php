@@ -1,3 +1,3 @@
 <?
-echo "hello! this is my site v.31";
+echo "hello! this is my site v.32";
 ?>
