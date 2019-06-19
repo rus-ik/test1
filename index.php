@@ -11,7 +11,7 @@ function extract_sms_data ($sms_text) {
 	$wallet = $code = $amount = '';
 
 	$amount_suffixes = '(р|к)*';
-	$regex_for_numbers = '/(\d+(\r|\n|,|.| [^'.$amount_suffixes.'])|(\d+((\.|,)\d{0,2})?(.+)('.$amount_suffixes.')))/';
+	$regex_for_numbers = '/(\d+(\r|\n| [^'.$amount_suffixes.'])|(\d+((\.|,)\d{0,2})?(.+)('.$amount_suffixes.')))/';
 
 	if (preg_match_all($regex_for_numbers, $sms_text, $matches) && isset($matches[0])) {
 		foreach ($matches[0] as $k => $number)	 {
